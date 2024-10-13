@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS</title>
+
+    <!-- normalize all elements -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- call font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link the main style sheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main-cruds">
+      <div class="container">
+        <header>
+          <h2>cruds</h2>
+          <p>product management system</p>
+        </header>
+        <!-- start inputs  -->
+        <div class="inputs">
+          <input type="text" placeholder="title" id="title" />
+          <div class="price-info">
+            <input type="number" id="price" placeholder="price" />
+            <input type="number" id="taxes" placeholder="taxes" />
+            <input type="number" id="ads" placeholder="ads" />
+            <input type="number" id="discount" placeholder="discount" />
+            <span class="total"></span>
+          </div>
+          <input type="number" id="count" placeholder="count" />
+          <input type="text" id="category" placeholder="category" />
+          <button id="create">Create</button>
+        </div>
+
+        <!-- end inputs  -->
+        <!-- start search  -->
+        <div class="search">
+          <input type="text" placeholder="Search By Title" id="search" />
+          <div class="search-option">
+            <button id="searchTitle">Search By Title</button>
+            <button id="searchCategory">Search By Category</button>
+            <button id="searchPrice">Search By Price</button>
+          </div>
+        </div>
+        <!-- end search  -->
+        <button id="clear-all">DELETE ALL</button>
+        <!-- start table  -->
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>TITLE</th>
+              <th>PRICE</th>
+              <th>TAXES</th>
+              <th>ADS</th>
+              <th>DISCOUNT</th>
+              <th>TOTAL</th>
+              <th>CATEGORY</th>
+              <th>UPDATE</th>
+              <th>DELETE</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <!-- end table  -->
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

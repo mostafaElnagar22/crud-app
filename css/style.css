@@ -1,0 +1,285 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --main-transition: 0.3s;
+  --btn-color: #5050d5ad;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #222;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+/* small screen */
+@media (min-width: 768px) {
+  .container {
+    width: 735px;
+  }
+}
+/* medium screen  */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large screen  */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* start header  */
+
+.main-cruds .container > header {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+.main-cruds .container > header h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.main-cruds .container > header p {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+@media (max-width: 350px) {
+  .main-cruds .container > header p {
+    font-size: 5vw;
+  }
+}
+/* end header  */
+/* start inputs  */
+.inputs {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.inputs input {
+  display: block;
+  padding: 10px;
+  outline: none;
+  border: none;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  font-size: 22px;
+  background-color: #111;
+}
+.inputs input:focus {
+  background-color: black;
+  transform: scale(1.01);
+}
+.inputs #title {
+  width: 50%;
+}
+.inputs .price-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.inputs .price-info input {
+  width: 18%;
+  min-width: 110px;
+  flex: 1;
+}
+.inputs .price-info span {
+  display: block;
+  width: fit-content;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+}
+.inputs .price-info span::before {
+  content: "Total: ";
+  color: white;
+  margin-right: 7px;
+  color: white;
+  background-color: red;
+}
+
+.inputs #count {
+  width: calc(50% - 5px);
+}
+.inputs #category {
+  width: calc(50% - 5px);
+  flex-grow: 1;
+}
+.inputs #create {
+  width: 80%;
+  padding: 8px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 15px;
+  background: #5050d5ad;
+  color: white;
+  border: none;
+  outline: none;
+  transition: var(--main-transition);
+}
+.inputs #create:hover {
+  background-color: blue;
+  cursor: pointer;
+  letter-spacing: 3px;
+}
+
+/* end inputs  */
+/* start search  */
+.search #search {
+  width: 100%;
+  padding: 10px;
+  font-size: 22px;
+  background: #111;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  text-align: center;
+  margin: 5px 0;
+  caret-color: white;
+  color: white;
+  transition: var(--main-transition);
+}
+.search #search:focus {
+  transform: scaleX(1.01);
+  background-color: black;
+}
+.search .search-option button {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  background-color: var(--btn-color);
+  color: white;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  min-width: 220px;
+  max-width: 90%;
+  transition: var(--main-transition);
+}
+.search .search-option button:hover {
+  background-color: blue;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+.search .search-option {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* end search  */
+#clear-all {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--btn-color);
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: var(--main-transition);
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+#clear-all:hover {
+  letter-spacing: 3px;
+  opacity: 1;
+
+  background-color: red;
+}
+
+/* start table  */
+table {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  border-spacing: 5px;
+  overflow-x: auto;
+  position: relative;
+}
+.search-result {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  padding: 10px;
+  color: #ffffffc7;
+  font-size: 70px;
+  font-weight: 900;
+}
+td.tot {
+  background-color: green;
+}
+table thead th {
+  background-color: #00000082;
+}
+table th,
+table td {
+  padding: 3px;
+  color: white;
+  background: #5e575738;
+}
+table #update,
+table #delete {
+  background-color: var(--btn-color);
+  border-radius: 7px;
+  transition: var(--btn-color);
+}
+table #update:hover {
+  background-color: blue;
+  transform: scale(1.08);
+  cursor: pointer;
+}
+table #delete:hover {
+  background-color: red;
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+/* end table  */
